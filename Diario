@@ -2,3 +2,4 @@
 #fine tuning funzionante
 #img augmentation da rivedere (se cambia ogni epoca aumentare batch)
 #CNN indipendente per mask sempra performare meglio (DAVIS)
+#Optimizer - da verificare se migliora AdamW
