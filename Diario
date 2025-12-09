@@ -1,0 +1,4 @@
+#classificatore non lineare (256 e un layer lineare. dropout e batch norm, LeakyReLU) performa meglio
+#fine tuning funzionante
+#img augmentation da rivedere (se cambia ogni epoca aumentare batch)
+#CNN indipendente per mask sempra performare meglio (DAVIS)
