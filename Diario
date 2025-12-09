@@ -1,5 +1,14 @@
 #classificatore non lineare (256 e un layer lineare. dropout e batch norm, LeakyReLU) performa meglio
 #fine tuning funzionante
 #img augmentation da rivedere (se cambia ogni epoca aumentare batch)
-#CNN indipendente per mask sempra performare meglio (DAVIS)
+#CNN indipendente per mask sempra performare meglio
+#4 channels con classificatore non lineare migliora u po' il punteggio, ma come CNN for masks + transfer learning non superano 0.3 in test validation
 #Optimizer - da verificare se migliora AdamW
+
+#da provare fine tuning con 4 channels e/o image augmentation (stare attenti a modificare le masks)ù
+#da provare fine tuning con CNN for masks + transfer learning per le immagini. Bisogna capire se effettivamente usare le mask come "features" migliori le prestazioni 
+#provare a modificare batch size e altri iperparametri per vedere se migliora la rete 
+#capire se modificare l'immagine applicandogli la mask (per esempio illuminando o cerchiando le zone bianche) porti a un miglioramento o se ritagliare l'immagine in base alla mask migliori 
+
+
+#per ora il risultato migliore è stato ottenuto con transfer learning, batch size=64, image augmentation tutto (tranne ToPil e ToTensor), classificatore non lineare e immagini ritagliate con la mask (ovvero tutta l'immagine bianca tranne le parti della mask)
