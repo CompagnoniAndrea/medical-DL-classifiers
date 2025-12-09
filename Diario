@@ -6,7 +6,8 @@
 #Optimizer - da verificare se migliora AdamW
 #Outside Mask Removal: neri tutti i pixel fuori dalla mask - val_f1 score: 0.3448
 #Outline Mask: sottolinea il bordo della mask - val_f1 score: 0.3974 
-#Image Augmentation: solo ColorJitter - val_f1 0.3729
+#Image Augmentation: solo ColorJitter - val_f1: 0.3729
+#Outline + NonLinear class - val_f1: 0.4265
 
 
 #da provare fine tuning con 4 channels e/o image augmentation (stare attenti a modificare le masks)ù
