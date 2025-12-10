@@ -18,3 +18,15 @@
 
 
 #per ora il risultato migliore è stato ottenuto con transfer learning, batch size=64, image augmentation tutto (tranne ToPil e ToTensor), classificatore non lineare e immagini ritagliate con la mask (ovvero tutta l'immagine bianca tranne le parti della mask)
+
+train_transforms = transforms.Compose([
+    #transforms.ToPILImage(), 
+    ApplyMask(p=0.3, fill_color=fill_color, color_variation=0.05), # Apply mask first (handles tuple input)
+    transforms.RandomHorizontalFlip(p=0.2),
+    transforms.RandomAffine(degrees=0, translate=(0.1, 0.1), fill=fill_color),
+    transforms.RandomVerticalFlip(p=0.5),
+    transforms.RandomRotation(90, fill=fill_color), 
+    AddGreenSpot(spot_path="/kaggle/input/dataset/green_spot.png", size=(84, 63), p=0.3), 
+    
+    #transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.10),
+])
