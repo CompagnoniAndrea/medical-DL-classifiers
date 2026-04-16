@@ -32,7 +32,6 @@ The project emphasizes a clean separation of concerns, maintaining modularity fo
     - Main entry point: `CNN_Cancer_Classification.ipynb`
     - Earlier work and tests: `experiments/` directory
 - `shared/`: Utilities and generic preprocessing scripts shared across both environments.
-- `docs/`: Configuration files and project journals.
 
 ## ⚙️ Setup & Installation
 
